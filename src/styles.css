@@ -83,7 +83,13 @@ h2 {
   margin-top: 2em;
   border: none;
   color: #023047;
-  font-size: 1.2em;
+  font-size: 1.1rem;
+}
+
+.coded a {
+  border: none;
+  color: #023047;
+  font-size: 1.1rem;
 }
 
 .social-icons,
@@ -163,6 +169,7 @@ h2 {
   text-decoration: none;
   padding: 2px;
   transition: all 180ms ease-in;
+  text-align: right;
 }
 
 #repository a:hover {
