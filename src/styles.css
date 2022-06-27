@@ -79,6 +79,38 @@ h2 {
   font-size: 15px;
 }
 
+.coded {
+  margin-top: 2em;
+  border: none;
+  color: #023047;
+  font-size: 20px;
+}
+
+.social-icons,
+.social-icons a,
+.social-icons .fa-brands-icons {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  text-decoration: none;
+  color: #023047;
+  font-size: 30px;
+  transition: all 2s ease-in;
+}
+.social-icons .fa-brands:hover {
+  color: #ffb703;
+  border-radius: 5px;
+  transform: rotate(1turn);
+}
+.card {
+  border: none;
+  padding: 5px 10px;
+}
+
+.card:hover {
+  background-color: #023047;
+}
+
 #city-search {
   text-align: center;
   width: 100%;
