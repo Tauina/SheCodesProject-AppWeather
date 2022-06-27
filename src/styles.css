@@ -100,7 +100,6 @@ h2 {
 .social-icons .fa-brands:hover {
   color: #ffb703;
   border-radius: 5px;
-  transform: rotate(1turn);
 }
 .card {
   border: none;
@@ -156,6 +155,20 @@ h2 {
   font-size: 13px;
   color: #023047;
   text-align: center;
+}
+
+#repository,
+#repository a {
+  color: #023047;
+  text-decoration: none;
+  padding: 2px;
+  transition: all 180ms ease-in;
+}
+
+#repository a:hover {
+  background: #023047;
+  color: #fb8500;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 770px) {
