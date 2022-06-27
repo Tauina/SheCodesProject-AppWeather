@@ -1,0 +1,140 @@
+body {
+  font-family: Tahoma, Verdana;
+  margin: 0 25px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 1.5em;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: center;
+  color: #fb8500;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  background: rgba(255, 183, 3, 0.4);
+  border-radius: 1.25em;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.app-weather {
+  border: 1px solid rgba(142, 202, 230, 0.7);
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 0 25px 10px;
+  border-radius: 10px;
+}
+
+.weatherIcon {
+  font-size: 50px;
+  color: #ffb703;
+  text-align: center;
+}
+
+.date-search {
+  font-size: 15px;
+  color: #023047;
+  text-align: left;
+}
+
+.temp-info {
+  font-size: 1em;
+  text-align: right;
+  color: #023047;
+}
+.dayWeek,
+.dayNumber {
+  color: #fb8500;
+  text-align: center;
+  font-size: 18px;
+}
+
+.dayNumber {
+  font-weight: 600;
+}
+
+.dweatherIcon {
+  color: #ffb703;
+  font-size: 30px;
+  text-align: center;
+}
+
+.dweatherInfo {
+  color: #023047;
+  text-align: center;
+  font-size: 16px;
+}
+
+.maxTemperature,
+.minTemperature {
+  color: #023047;
+  text-align: center;
+  font-size: 15px;
+}
+
+#city-search {
+  text-align: center;
+  width: 100%;
+  border-radius: 1.25em;
+  color: #023047;
+  font-size: 1em;
+  font-weight: 550;
+  padding: 5px;
+  margin: 10px;
+}
+
+#searchButton,
+#currentButton {
+  vertical-align: center;
+  color: #fb8500;
+  font-size: 1em;
+  border-radius: 6px;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+#city-name {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: left;
+  color: #023047;
+}
+
+#descripton {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: right;
+  color: #023047;
+}
+
+#celsius a,
+#fahrenheit a {
+  text-decoration: none;
+}
+
+#grid {
+  margin-bottom: 1.25em;
+  font-size: 13px;
+  color: #023047;
+  text-align: center;
+}
+
+@media screen and (max-width: 770px) {
+  #city-search {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #searchButton,
+  #currentButton {
+    border: none;
+  }
+}
