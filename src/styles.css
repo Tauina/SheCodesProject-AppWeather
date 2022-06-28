@@ -27,7 +27,7 @@ h2 {
 .app-weather {
   border: 1px solid #878787;
   max-width: 620px;
-  margin: 30px auto;
+  margin: 30px auto 15px;
   padding: 0 25px 10px;
   border-radius: 10px;
 }
@@ -136,6 +136,7 @@ h2 {
   font-weight: 600;
   text-align: right;
   color: #023047;
+  text-transform: capitalize;
 }
 
 #temp {
