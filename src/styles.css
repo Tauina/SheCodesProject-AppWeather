@@ -45,10 +45,9 @@ h2 {
 }
 
 .temp-info {
-  font-size: 1em;
   text-align: right;
-  color: #023047;
 }
+
 .dayWeek,
 .dayNumber {
   color: #fb8500;
@@ -81,39 +80,26 @@ h2 {
 
 .coded {
   margin-top: 2em;
-  border: none;
-  color: #023047;
-  font-size: 1.1rem;
 }
 
-.coded a {
-  border: none;
-  color: #023047;
-  font-size: 1.1rem;
-}
-
-.social-icons,
-.social-icons a,
-.social-icons .fa-brands-icons {
+.social-icons {
   display: flex;
   justify-content: space-between;
-  text-align: center;
-  text-decoration: none;
-  color: #023047;
   font-size: 30px;
   transition: all 2s ease-in;
 }
-.social-icons .fa-brands:hover {
-  color: #ffb703;
-  border-radius: 5px;
+
+.social-icons a {
+  color: #023047;
 }
+
 .card {
   border: none;
-  padding: 5px 10px;
+  padding: 0 10px;
 }
 
 .card:hover {
-  background-color: #023047;
+  background-color: #a8a6b4;
 }
 
 #city-search {
@@ -151,9 +137,19 @@ h2 {
   color: #023047;
 }
 
+#temp {
+  font-size: 2.3em;
+  font-weight: 600;
+  color: #023047;
+}
+
 #celsius a,
 #fahrenheit a {
   text-decoration: none;
+  color: #023047;
+  position: relative;
+  font-size: 1em;
+  top: -0.9em;
 }
 
 #grid {
@@ -163,19 +159,21 @@ h2 {
   text-align: center;
 }
 
-#repository,
-#repository a {
-  color: #023047;
-  text-decoration: none;
-  padding: 2px;
-  transition: all 180ms ease-in;
-  text-align: right;
+#codID {
+  border: none;
+  color: #a8a6b4;
+  font-size: 13px;
+  text-align: center;
+  margin: 5px auto;
 }
 
-#repository a:hover {
-  background: #023047;
-  color: #fb8500;
-  border-radius: 5px;
+#codID a {
+  color: #023047;
+  text-decoration: none;
+}
+
+#codID a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 770px) {
