@@ -25,8 +25,8 @@ h2 {
 }
 
 .app-weather {
-  border: 1px solid rgba(142, 202, 230, 0.7);
-  max-width: 650px;
+  border: 1px solid #878787;
+  max-width: 620px;
   margin: 30px auto;
   padding: 0 25px 10px;
   border-radius: 10px;
@@ -79,7 +79,7 @@ h2 {
 }
 
 .coded {
-  margin-top: 2em;
+  max-width: 580px;
 }
 
 .social-icons {
@@ -186,5 +186,9 @@ h2 {
   #searchButton,
   #currentButton {
     border: none;
+  }
+  .app-weather {
+    border: none;
+    padding: 5px;
   }
 }
