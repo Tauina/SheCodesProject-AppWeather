@@ -1,14 +1,17 @@
 // Get current Date info
-function formatDate(data) {
-  let date = data.getDate();
-  let hours = data.getHours();
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = data.getMinutes();
+
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+  let day = date.getDate();
+
   let months = [
     "January",
     "February",
@@ -23,13 +26,14 @@ function formatDate(data) {
     "November",
     "Dececember",
   ];
-  let month = months[data.getMonth()];
-  let dateCalendar = `${date} ${month}`;
-  let hourClock = `${hours}:${minutes}`;
-  return `${dateCalendar}, ${hourClock}`;
+  let month = months[date.getMonth()];
+
+  return `${day} ${month}, ${hours}:${minutes}`;
 }
 
-function formatDay(date) {
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
   let days = [
     "Sunday",
     "Monday",
@@ -39,8 +43,7 @@ function formatDay(date) {
     "Friday",
     "Saturday",
   ];
-  let day = days[date.getDay()];
-  return `${day}`;
+  return days[day];
 }
 
 function searchCity(city) {
@@ -100,10 +103,6 @@ function converToCelsius(event) {
   temperature = Number(temperature);
   temperatureElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
 }
-
-let currentTime = new Date();
-document.querySelector("#actual-date").innerHTML = formatDate(currentTime);
-document.querySelector("#week-day").innerHTML = formatDay(currentTime);
 
 let searchButton = document.querySelector("#form-search");
 searchButton.addEventListener("submit", citySearch);
