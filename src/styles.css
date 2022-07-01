@@ -147,11 +147,19 @@ h2 {
 
 #celsius a,
 #fahrenheit a {
-  text-decoration: none;
-  color: #023047;
   position: relative;
   font-size: 1em;
   top: -0.9em;
+}
+
+.active {
+  color: #023047;
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  color: #023047;
 }
 
 #grid {
