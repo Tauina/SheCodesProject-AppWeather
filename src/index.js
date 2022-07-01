@@ -116,6 +116,36 @@ function converToCelsius(event) {
   fahrenheitLink.classList.remove("active");
 }
 
+function getForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+
+  forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+   <div class="col d1">
+      <br />
+      <div class="dayWeek">${day}</div>
+      <div class="dayNumber">07/06</div>
+      <div class="dweatherIcon"><img src="" alt="" id="icon" /></div>
+      <div class="dweatherInfo">Mostly sunny</div>
+      <div class="forecastTemperature">
+        <span class="maxTemperature">30º</span>
+        <strong> | </strong>
+        <span class="minTemperature">19º</span>
+      </div>
+   </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let celsiusTemperature = null;
 
 let searchButton = document.querySelector("#form-search");
@@ -131,3 +161,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", converToCelsius);
 
 searchCity("Lisbon");
+getForecast();

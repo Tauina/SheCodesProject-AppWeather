@@ -53,6 +53,16 @@ h2 {
   text-align: right;
 }
 
+.active {
+  color: #023047;
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  color: #023047;
+}
+
 .dayWeek,
 .dayNumber {
   color: #fb8500;
@@ -155,16 +165,6 @@ h2 {
   position: relative;
   font-size: 1em;
   top: -0.9em;
-}
-
-.active {
-  color: #023047;
-  cursor: default;
-  text-decoration: none;
-}
-
-.active:hover {
-  color: #023047;
 }
 
 #grid {
