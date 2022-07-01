@@ -97,18 +97,17 @@ function searchLocation(position) {
 function converToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
 function converToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
-  let temperature = temperatureElement.innerHTML;
-  temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+
+let celsiusTemperature = null;
 
 let searchButton = document.querySelector("#form-search");
 searchButton.addEventListener("submit", citySearch);
