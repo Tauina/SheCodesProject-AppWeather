@@ -21,169 +21,172 @@
   </head>
   <body>
     <div class="container">
-      <div class="app-weather">
-        <h1>Weather</h1>
-        <form id="form-search">
-          <div class="row">
-            <div class="col">
-              <input
-                type="search"
-                class="form-control"
-                id="city-search"
-                placeholder="Place name city"
-                required
-                autofocus
-              />
+      <div class="app-wrapper">
+        <div class="app-weather">
+          <h1>Weather</h1>
+          <form id="form-search">
+            <div class="row">
+              <div class="col">
+                <input
+                  type="search"
+                  class="form-control"
+                  id="city-search"
+                  placeholder="Place name city"
+                  required
+                  autofocus
+                />
+              </div>
+              <div class="col-2 icons">
+                <input
+                  type="Submit"
+                  value="🔎"
+                  class="btn btn-outline-secondary w-100"
+                  id="searchButton"
+                />
+              </div>
+              <div class="col-2 icons">
+                <button
+                  class="btn btn-outline-secondary w-100"
+                  id="currentButton"
+                >
+                  📌
+                </button>
+              </div>
             </div>
-            <div class="col-2 icons">
-              <input
-                type="Submit"
-                value="Search"
-                class="btn btn-outline-warning w-100"
-                id="searchButton"
-              />
-            </div>
-            <div class="col-2 icons">
-              <button class="btn btn-outline-dark w-100" id="currentButton">
-                Current
-              </button>
-            </div>
-          </div>
-        </form>
+          </form>
 
-        <div class="row align-items-top">
-          <div class="col-5">
-            <div id="city-name"></div>
-            <div class="date-search">
-              <div id="week-day"></div>
-              <div id="actual-date"></div>
+          <div class="row align-items-top">
+            <div class="col-5">
+              <div id="city-name"></div>
+              <div class="date-search">
+                <div id="week-day"></div>
+                <div id="actual-date"></div>
+              </div>
+            </div>
+            <div class="col-1 weatherIcon">
+              <img src="" alt="" id="icon" />
+            </div>
+            <div class="col-6 weatherInfo">
+              <div id="descripton"></div>
+              <div class="temp-info">
+                <span id="temp"></span>
+                <span id="celsius"> <a href="#" id="celsius-link" class="active">ºC</a></span>
+                <span id="fahrenheit"
+                  ><a href="#" id="fahrenheit-link">ºF</a>
+                </span>
+              </div>
             </div>
           </div>
-          <div class="col-1 weatherIcon">
-            <img src="" alt="" id="icon" />
+
+          <div class="row align-items-center" id="grid">
+            <div class="col">Humidity <span id="humidity"></span>%</div>
+            <div class="col">Wind <span id="wind"></span> km/h</div>
           </div>
-          <div class="col-6 weatherInfo">
-            <div id="descripton"></div>
-            <div class="temp-info">
-              <span id="temp"></span>
-              <span id="celsius"
-                ><a href="#" id="celsius-link" class="active">ºC</a></span
+          <h2>5 day forecast</h2>
+          <div class="row forecast">
+            <div class="col d1">
+              <br />
+              <div class="dayWeek">Tue</div>
+              <div class="dayNumber">07/06</div>
+              <div class="dweatherIcon"><i class="fa-solid fa-sun"></i></div>
+              <div class="dweatherInfo">Mostly sunny</div>
+              <div class="maxTemperature">30<span>ºC</span></div>
+              <div class="minTemperature">19<span>ºC</span></div>
+            </div>
+            <div class="col d2">
+              <br />
+              <div class="dayWeek">Wed</div>
+              <div class="dayNumber">08/06</div>
+              <div class="dweatherIcon">
+                <i class="fa-solid fa-cloud-sun"></i>
+              </div>
+              <div class="dweatherInfo">Partly cloudy</div>
+              <div class="maxTemperature">30<span>ºC</span></div>
+              <div class="minTemperature">19<span>ºC</span></div>
+            </div>
+            <div class="col d3">
+              <br />
+              <div class="dayWeek">Thu</div>
+              <div class="dayNumber">09/06</div>
+              <div class="dweatherIcon"><i class="fa-solid fa-sun"></i></div>
+              <div class="dweatherInfo">Sunny</div>
+              <div class="maxTemperature">30<span>ºC</span></div>
+              <div class="minTemperature">19<span>ºC</span></div>
+            </div>
+            <div class="col d4">
+              <br />
+              <div class="dayWeek">Fri</div>
+              <div class="dayNumber">10/06</div>
+              <div class="dweatherIcon"><i class="fa-solid fa-sun"></i></div>
+              <div class="dweatherInfo">Sunny</div>
+              <div class="maxTemperature">30<span>ºC</span></div>
+              <div class="minTemperature">19<span>ºC</span></div>
+            </div>
+            <div class="col d5">
+              <br />
+              <div class="dayWeek">Sat</div>
+              <div class="dayNumber">11/06</div>
+              <div class="dweatherIcon"><i class="fa-solid fa-sun"></i></div>
+              <div class="dweatherInfo">Mostly sunny</div>
+              <div class="maxTemperature">30<span>ºC</span></div>
+              <div class="minTemperature">19<span>ºC</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="coded">
+          <p id="codID">
+            This project was coded by
+            <a href="https://github.com/Tauina">Catarina Gouveia</a> and is
+            <a href="https://github.com/Tauina/SheCodesProject-AppWeather"
+              >open-sourced on GitHub</a
+            >
+            and
+            <a href="https://frolicking-truffle-9bfd2b.netlify.app/"
+              >hosted on Netlify</a
+            >
+          </p>
+          <div class="social-icons">
+            <div class="card">
+              <a
+                id="profile-link"
+                href="https://www.facebook.com/tauina/"
+                target="_blank"
               >
-              <span id="fahrenheit"
-                ><a href="#" id="fahrenheit-link">ºF</a>
-              </span>
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
             </div>
-          </div>
-        </div>
-
-        <div class="row align-items-center" id="grid">
-          <div class="col">Humidity <span id="humidity"></span>%</div>
-          <div class="col">Wind <span id="wind"></span> km/h</div>
-        </div>
-        <h2>5 day forecast</h2>
-        <div class="row forecast">
-          <div class="col d1">
-            <br />
-            <div class="dayWeek">Tue</div>
-            <div class="dayNumber">07/06</div>
-            <div class="dweatherIcon"><i class="fa-solid fa-sun"></i></div>
-            <div class="dweatherInfo">Mostly sunny</div>
-            <div class="maxTemperature">30<span>ºC</span></div>
-            <div class="minTemperature">19<span>ºC</span></div>
-          </div>
-          <div class="col d2">
-            <br />
-            <div class="dayWeek">Wed</div>
-            <div class="dayNumber">08/06</div>
-            <div class="dweatherIcon">
-              <i class="fa-solid fa-cloud-sun"></i>
+            <div class="card">
+              <a href="https://twitter.com/tauina/" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
             </div>
-            <div class="dweatherInfo">Partly cloudy</div>
-            <div class="maxTemperature">30<span>ºC</span></div>
-            <div class="minTemperature">19<span>ºC</span></div>
-          </div>
-          <div class="col d3">
-            <br />
-            <div class="dayWeek">Thu</div>
-            <div class="dayNumber">09/06</div>
-            <div class="dweatherIcon"><i class="fa-solid fa-sun"></i></div>
-            <div class="dweatherInfo">Sunny</div>
-            <div class="maxTemperature">30<span>ºC</span></div>
-            <div class="minTemperature">19<span>ºC</span></div>
-          </div>
-          <div class="col d4">
-            <br />
-            <div class="dayWeek">Fri</div>
-            <div class="dayNumber">10/06</div>
-            <div class="dweatherIcon"><i class="fa-solid fa-sun"></i></div>
-            <div class="dweatherInfo">Sunny</div>
-            <div class="maxTemperature">30<span>ºC</span></div>
-            <div class="minTemperature">19<span>ºC</span></div>
-          </div>
-          <div class="col d5">
-            <br />
-            <div class="dayWeek">Sat</div>
-            <div class="dayNumber">11/06</div>
-            <div class="dweatherIcon"><i class="fa-solid fa-sun"></i></div>
-            <div class="dweatherInfo">Mostly sunny</div>
-            <div class="maxTemperature">30<span>ºC</span></div>
-            <div class="minTemperature">19<span>ºC</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="coded">
-        <p id="codID">
-          This project was coded by
-          <a href="https://github.com/Tauina">Catarina Gouveia</a> and is
-          <a href="https://github.com/Tauina/SheCodesProject-AppWeather"
-            >open-sourced on GitHub</a
-          >
-          and
-          <a href="https://frolicking-truffle-9bfd2b.netlify.app/"
-            >hosted on Netlify</a
-          >
-        </p>
-        <div class="social-icons">
-          <div class="card">
-            <a
-              id="profile-link"
-              href="https://www.facebook.com/tauina/"
-              target="_blank"
-            >
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-          </div>
-          <div class="card">
-            <a href="https://twitter.com/tauina/" target="_blank">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
-          </div>
 
-          <div class="card">
-            <a href="https://instagram.com/tauina" target="_blank">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </div>
+            <div class="card">
+              <a href="https://instagram.com/tauina" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
 
-          <div class="card">
-            <a
-              href="https://www.linkedin.com/in/catarina-gouveia-84464554/"
-              target="_blank"
-            >
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-          </div>
+            <div class="card">
+              <a
+                href="https://www.linkedin.com/in/catarina-gouveia-84464554/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
 
-          <div class="card">
-            <a href="https://github.com/Tauina" target="_blank">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </div>
+            <div class="card">
+              <a href="https://github.com/Tauina" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
 
-          <div class="card">
-            <a href="https://www.freecodecamp.org/Tauina" target="_blank">
-              <i class="fa-brands fa-free-code-camp"></i
-            ></a>
+            <div class="card">
+              <a href="https://www.freecodecamp.org/Tauina" target="_blank">
+                <i class="fa-brands fa-free-code-camp"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>

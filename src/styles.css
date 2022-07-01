@@ -6,7 +6,7 @@ body {
 
 h1 {
   font-size: 50px;
-  line-height: 1.5em;
+  line-height: 1em;
   font-weight: 600;
   text-align: center;
   vertical-align: center;
@@ -24,11 +24,16 @@ h2 {
   text-transform: capitalize;
 }
 
+.app-wrapper {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
 .app-weather {
   border: 1px solid #878787;
   max-width: 620px;
-  margin: 30px auto 15px;
-  padding: 0 25px 10px;
+  margin: 30px auto 0;
+  padding: 10px 25px;
   border-radius: 10px;
 }
 
@@ -79,14 +84,14 @@ h2 {
 }
 
 .coded {
-  max-width: 580px;
-  margin: 0 auto;
+  margin-top: 1em;
+  padding: 0 20px;
 }
 
 .social-icons {
   display: flex;
   justify-content: space-between;
-  font-size: 30px;
+  font-size: 25px;
   transition: all 2s ease-in;
 }
 
@@ -100,7 +105,7 @@ h2 {
 }
 
 .card:hover {
-  background-color: #a8a6b4;
+  background-color: #878787;
 }
 
 #city-search {
@@ -140,7 +145,7 @@ h2 {
 }
 
 #temp {
-  font-size: 2.3em;
+  font-size: 35px;
   font-weight: 600;
   color: #023047;
 }
@@ -171,7 +176,7 @@ h2 {
 
 #codID {
   border: none;
-  color: #a8a6b4;
+  color: #878787;
   font-size: 13px;
   text-align: center;
   margin: 5px auto;
@@ -190,15 +195,15 @@ h2 {
   #city-search {
     padding-left: 0;
   }
+  .app-weather {
+    border: none;
+    padding: 5px;
+  }
 }
 
 @media screen and (max-width: 450px) {
   #searchButton,
   #currentButton {
     border: none;
-  }
-  .app-weather {
-    border: none;
-    padding: 5px;
   }
 }

@@ -28,7 +28,7 @@ function formatDate(timestamp) {
   ];
   let month = months[date.getMonth()];
 
-  return `${day} ${month}, ${hours}:${minutes}`;
+  return `${day} ${month} at ${hours}:${minutes}`;
 }
 
 function formatDay(timestamp) {
@@ -61,16 +61,21 @@ function citySearch(event) {
 }
 
 function getWeather(response) {
+  celsiusTemperature = response.data.main.temp;
+
   document.querySelector("#city-name").innerHTML = response.data.name;
-  document.querySelector("#temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temp").innerHTML = Math.round(celsiusTemperature);
   document.querySelector("#descripton").innerHTML =
-    response.data.weather[0].descripton;
+    response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  document.querySelector("#actual-date").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
+  document.querySelector("#week-day").innerHTML = formatDay(response.data.dt);
+
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
