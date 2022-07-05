@@ -129,35 +129,62 @@ function converToCelsius(event) {
 }
 
 function getForecast(response) {
-  console.log(response.data.daily);
-
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+
+  forecast.forEach(function (forecastday, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
    <div class="col d1">
       <br />
-      <div class="dayWeek">${day}</div>
-      <div class="dayNumber">07/06</div>
-      <div class="dweatherIcon"><img src="" alt="" id="icon" /></div>
-      <div class="dweatherInfo">Mostly sunny</div>
+      <div class="dayWeek">${formatDay(forecastday.dt)}</div>
+      <div class="dayNumber">${formatDateForecast(forecastday.dt * 1000)}</div>
+      <div class="dweatherIcon"><img src="http://openweathermap.org/img/wn/${
+        forecastday.weather[0].icon
+      }@2x.png" alt="" width="80"/></div>
       <div class="forecastTemperature">
-        <span class="maxTemperature">30º</span>
+        <span class="maxTemperature">${Math.round(forecastday.temp.max)}º</span>
         <strong> | </strong>
-        <span class="minTemperature">19º</span>
+        <span class="minTemperature">${Math.round(forecastday.temp.min)}º</span>
       </div>
+      <div class="dweatherInfo">${forecastday.weather[0].description}</div>
+
    </div>
     `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
 
   forecastElement.innerHTML = forecastHTML;
+}
+
+function formatDateForecast(timestamp) {
+  let date = new Date(timestamp);
+  let day = date.getDate();
+  if (day < 10) {
+    day = `0${day}`;
+  }
+  let months = [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+  ];
+  let month = months[date.getMonth()];
+
+  return `${day}/${month}`;
 }
 
 let celsiusTemperature = null;
