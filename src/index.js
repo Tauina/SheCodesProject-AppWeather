@@ -150,7 +150,7 @@ function getForecast(response) {
         <strong> | </strong>
         <span class="minTemperature">${Math.round(forecastday.temp.min)}º</span>
       </div>
-      <div class="dweatherInfo">${forecastday.weather[0].description}</div>
+      <div class="dweatherInfo">${forecastday.weather[0].main}</div>
 
    </div>
     `;
