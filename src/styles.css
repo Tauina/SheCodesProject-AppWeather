@@ -38,8 +38,6 @@ h2 {
 }
 
 .weatherIcon {
-  font-size: 50px;
-  color: #ffb703;
   text-align: center;
 }
 
@@ -67,30 +65,30 @@ h2 {
 .dayNumber {
   color: #fb8500;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .dayNumber {
   font-weight: 600;
 }
 
-.dweatherIcon {
-  color: #ffb703;
-  font-size: 30px;
-  text-align: center;
-}
-
 .dweatherInfo {
   color: #023047;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
 }
 
-.maxTemperature,
-.minTemperature {
-  color: #023047;
+.forecastTemperature {
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
+}
+
+.maxTemperature {
+  color: #023047;
+}
+
+.minTemperature {
+  color: #878787;
 }
 
 .coded {
